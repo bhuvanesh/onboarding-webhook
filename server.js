@@ -58,5 +58,5 @@ fastify.post('/onboarding', async (request, reply) => {
   }
 });
 
-const port = process.env.PORT || 3000;
+const port = Number(process.env.PORT) || 3000;
 await fastify.listen({ port, host: '0.0.0.0' });
